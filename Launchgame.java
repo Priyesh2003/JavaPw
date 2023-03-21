@@ -1,5 +1,5 @@
 package Strings;
-import java.util.*;
+import java.util.Scanner;
 class Guesser
 {
     int guessNum;
