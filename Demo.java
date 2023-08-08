@@ -2,10 +2,13 @@ class Student
 {
    private int age;
     private String name;
-    public void setData()
+    public void setData1(int age)
     {
-        age = 18;
-        name = "Rahul";
+        this.age = age;
+    }
+    public void setData2(String name)
+    {
+        this.name = name;
     }
     public  void show()
     {
@@ -15,8 +18,14 @@ class Student
 public class Demo {
     public static void main(String[] args)
     {
+
         Student obj = new Student();
-        obj.setData();
+        Student obj1 = new Student();
+        obj.setData1(18);
+        obj1.setData1(23);
+        obj.setData2("Navin");
+        obj1.setData2("Kiran");
         obj.show();
+        obj1.show();
     }
 }
