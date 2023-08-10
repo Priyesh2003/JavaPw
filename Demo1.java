@@ -1,12 +1,22 @@
-class Student
+class Student1
 {
-    private int age;
+   private int age;
     private String name;
-    public void setData1(int age)
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age)
     {
         this.age = age;
     }
-    public void setData2(String name)
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name)
     {
         this.name = name;
     }
@@ -15,17 +25,23 @@ class Student
         System.out.println(name + " " + age);
     }
 }
-public class Demo1 {
+public class Demo {
     public static void main(String[] args)
     {
 
-        Student obj = new Student();
-        Student obj1 = new Student();
-        obj.setData1(18);
-        obj1.setData1(23);
-        obj.setData2("Navin");
-        obj1.setData2("Kiran");
-        obj.show();
-        obj1.show();
+        Student1 obj = new Student1();
+        Student1 obj1 = new Student1();
+        obj.setAge(18);
+        obj1.setAge(23);
+        obj.setName("Navin");
+        obj1.setName("Kiran");
+        String studName= obj.getName();
+        System.out.println(studName);
+        int studAge=obj.getAge();
+        System.out.println(studAge);
+        String stuName= obj1.getName();
+        System.out.println(stuName);
+        int stuAge=obj1.getAge();
+        System.out.println(stuAge);
     }
 }
