@@ -10,17 +10,25 @@ class AeroPlane
         System.out.println("AeroPlane is flying");
     }
 }
-class CargoPlane extends AeroPlane
+class PassengerPlane extends AeroPlane
 {
     @Override
     public void fly() {
-        System.out.println("CargoPlane flies at lower height");
+        System.out.println("PassengerPlane flies at medium height");
+    }
+    public void carryPassenger()
+    {
+        System.out.println("PassengerPlane carries Passenger");
     }
 }
-class PassengerPlane extends AeroPlane
+class CargoPlane  extends AeroPlane
 {
     public void fly() {
-        System.out.println("CargoPlane flies at Medium height");
+        System.out.println("CargoPlane flies at Lower height");
+    }
+    public void carryGoods()
+    {
+      System.out.println("CargoPlane carries goods");
     }
 }
 public class Inheritance5 {
