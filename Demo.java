@@ -1,31 +1,30 @@
-class Student
+import java.util.Stack;
+
+@FunctionalInterface
+interface C
 {
-   private int age;
-    private String name;
-    public void setData1(int age)
-    {
-        this.age = age;
+    void show();
+}
+interface X
+{
+    void abc();
+}
+class B implements C,X
+{
+    @Override
+    public void show() {
+        System.out.println("in show");
     }
-    public void setData2(String name)
-    {
-        this.name = name;
-    }
-    public  void show()
-    {
-        System.out.println(name + " " + age);
+
+    @Override
+    public void abc() {
+        System.out.println("in abc");
     }
 }
 public class Demo {
     public static void main(String[] args)
     {
-
-        Student obj = new Student();
-        Student obj1 = new Student();
-        obj.setData1(18);
-        obj1.setData1(23);
-        obj.setData2("Navin");
-        obj1.setData2("Kiran");
+        C obj=new B();
         obj.show();
-        obj1.show();
     }
 }
